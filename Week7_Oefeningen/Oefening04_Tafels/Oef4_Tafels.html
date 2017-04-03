@@ -26,15 +26,23 @@
     <input id="calculate" type="button" value="Toon tafel"/>
 </div>
 
+
 <script>
     "use strict";
-    document.getElementById("calculate").addEventListener("click", showTable)
-    function showTable() {
-        {
-           var i = document.getElementById("number").value;
 
+    document.getElementById("calculate").addEventListener("click", displayTable);
+    function displayTable() {
+        {
+            var number = document.getElementById("number").value;
+            var text = "";
+
+            for (let i = 0; i <= 10; i++) {
+                var res = number * i;
+                text += number + " x " + i + " = " + res + document.write("\n");
+            }
+            document.write(text);
         }
-    }
+
     })();
 
 </script>
