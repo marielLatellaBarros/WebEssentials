@@ -23,16 +23,7 @@
         <option value="10">10</option>
     </select>
 
-    <input id="calculate" type="button" value="Toon tafel" onclick='(function () {
-                var number = document.getElementById("number").value;
-                var text = "";
-
-                for (let i = 0; i <= 10; i++) {
-                var res = number * i;
-                text += number + " x " + i + " = " + res + "<br/>";
-                }
-                document.getElementById("output").innerHTML = text;
-                })()'/>
+    <input id="calculate" type="button" value="Toon tafel" onclick='displayTable()'/>
 </div>
 
 <div id="output"></div>
@@ -56,19 +47,19 @@
 //                document.getElementById("output").innerHTML = text;
 //        });
 
-//    function displayTable() {
-//        {
-//            var number = document.getElementById("number").value;
-//            var text = "";
-//
-//            for (let i = 0; i <= 10; i++) {
-//                var res = number * i;
-//                text += number + " x " + i + " = " + res + "<br/>";
-//            }
-//            document.getElementById("output").innerHTML = text;
-//            //document.write(text);
-//        }
-//    };
+    function displayTable() {
+        {
+            var number = document.getElementById("number").value;
+            var text = "";
+
+            for (let i = 0; i <= 10; i++) {
+                var res = number * i;
+                text += number + " x " + i + " = " + res + "<br/>";
+            }
+            document.getElementById("output").innerHTML = text;
+            //document.write(text);
+        }
+    };
 
 </script>
 </body>
