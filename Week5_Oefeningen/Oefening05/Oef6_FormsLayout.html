@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Oef6: Formulier en lay-out</title>
+    <link rel="stylesheet" href="layout.css">
+
+</head>
+<body>
+
+<header>
+    <h1>HTML5 Hulplijn</h1>
+    <p>gebruik dit formulier om vragen te stellen over HTML5 en CSS.</p>
+</header>
+
+<main>
+    <form action="mailto:mariel.latella@gmail.com?subject=Formulier_test" method="post" enctype="text/plain">
+        <div>
+            <div class="form-row-flex">
+                <div>
+                    <label for="omschrijving">Korte omschrijving van je probleem:</label>
+                </div>
+                <div>
+                    <input type="text" name="omschrijving" id="omschrijving" size="80px" required="required"/>
+                </div>
+            </div>
+            <div class="form-row-flex">
+                <div>
+                    <label for="naam">Naam:</label>
+                </div>
+                <div>
+                    <input type="text" name="naam" id="naam" size="40px" required="required"/>
+                </div>
+            </div>
+            <div class="form-row-flex">
+                <div>
+                    <label for="email">E-mailadres:</label>
+                </div>
+                <div>
+                    <input type="text" name="email" id="email" size="40px" required="required"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row-flex">
+            <div>
+                <label for="beschrijving">Beschrijf wat je wilt doen en welk probleem je hierbij tegenkomt:</label>
+            </div>
+            <div>
+                <textarea cols="50" rows="30" id="beschrijving" name="beschrijving"></textarea>
+            </div>
+        </div>
+
+        <div class="form-row-flex">
+            <div>
+                <label for="beschrijving2">Indien mogelijk, plak hier de HTML code van de probleempagina:</label>
+            </div>
+            <div>
+                <textarea cols="50" rows="30" id="beschrijving2" name="beschrijving2"></textarea>
+            </div>
+        </div>
+
+        <div>
+            <p>De onderstaande informatie is optioneel, maar wordt gewaardeerd.</p>
+        </div>
+
+
+        <div class="form-row-flex">
+            <div>
+                <label for="browser">Welke browser gebruik je?:</label>
+            </div>
+            <div>
+                <select name="browser" id="browser">
+                    <option value="Internet Explorer">Internet Explorer</option>
+                    <option value="Mozilla">Mozilla</option>
+                    <option value="Chrome">Chrome</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row-flex"> 
+            <div>
+                <label>Welke editor gebruik je om je HTML code te schrijven?</label>
+            </div>
+            <div>
+                <input type="radio" name="editor" id="dreamweaver" value="Dreamweaver"/>
+                <label for="dreamweaver">Dreamweaver</label>
+                <div>
+                    <input type="radio" name="editor" id="aptana" value="Aptana"/>
+                    <label for="aptana">Aptana</label>
+                </div>
+                <div>
+                    <input type="radio" name="editor" id="uitgebreide" value="Uitgebreide"/>
+                    <label for="uitgebreide">Uitgebreide texteditor (Scite/Notepad++)</label>
+                </div>
+                <div>
+                    <input type="radio" name="editor" id="texteditor" value="Simpele texteditor"/>
+                    <label for="texteditor">Simpele texteditor</label>
+                </div>
+                <div>
+                    <input type="radio" name="editor" id="andere" value="Andere"/>
+                    <label for="andere">Andere
+                        <input type="text" name="andere" id="inputAndere" required="required"/>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <input type="submit" value="Verzenden"/>
+        <input type="reset" value="Wissen"/>
+    </form>
+
+</main>
+
+</body>
+</html>

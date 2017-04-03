@@ -1,0 +1,35 @@
+body{
+    font-family:Arial;
+}
+
+nav>ul>li>div{
+    color: darkgoldenrod;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+nav>ul>li>ul>li>h3{
+    font-weight: bold;
+}
+#level1{
+    list-style: disc;
+    color: hsl(43, 89%, 38%);
+}
+
+nav>ul>li>ul {
+    color: hsl(0, 0%, 0%);
+}
+
+.level2 {
+    list-style-image: url("vak.gif");
+    color: hsl(39, 100%, 50%);
+}
+
+.level3 {
+    list-style-image: url("lector.gif");
+    color: hsl(15, 72%, 70%);
+}
+
+.level4{
+    list-style: circle;
+}

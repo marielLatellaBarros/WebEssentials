@@ -1,0 +1,31 @@
+body {
+    background-image: url(afbeeldingen/achtergrond.gif);
+    font-family: Verdana, Geneva, sans-serif;
+    color: brown;
+}
+
+
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    list-style-image: none;
+    background-image: url("afbeeldingen/knop_hout_uit.gif");
+    background-repeat: no-repeat;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 10px 10px;
+    background-size: 100%;
+}
+
+nav li {
+    display: inline;
+
+}
+
+nav li a:hover{
+    color: #ffd700;
+    background-image: url("afbeeldingen/knop_hout_in.gif");
+    border-bottom: none;
+}
+

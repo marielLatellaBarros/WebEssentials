@@ -1,0 +1,23 @@
+body {
+    color: #ffd507;
+}
+
+hr {
+    border:none;
+    border-top: 1px solid #ffd507;
+    border-bottom: 1px solid #ffd507;
+    width: auto;
+    height: auto;
+    background-color: #ffd507;
+    text-align: left;
+}
+
+#html5Pic{
+    font-family:Verdana, Arial;
+    float: left;
+    width: 100px;
+    padding: 20px 60px;
+    border: outset;
+    margin-left: 300px;
+    border-color: #ffd507;
+}

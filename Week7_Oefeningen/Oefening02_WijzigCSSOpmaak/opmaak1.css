@@ -1,0 +1,21 @@
+body{
+    background: #687d07;
+    font-family: Courier;
+}
+
+h1 {
+    text-align: center;
+    color: khaki;
+}
+
+#paragraph {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+}
+
+footer a {
+    color: #dbdd19;
+    font-weight: bold;
+    text-decoration: none;
+}

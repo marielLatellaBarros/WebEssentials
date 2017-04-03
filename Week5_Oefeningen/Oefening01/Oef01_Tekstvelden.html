@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Oef01_Forms: Tekstvelden</title>
+    <style>
+        .form-row label {
+            width: 15vw;
+        }
+        input[type="number"] {
+            width: 10vw;
+        }
+    </style>
+</head>
+<body>
+<h1>Gelieve dit formulier in te vullen</h1>
+<form action="mailto:mariel.latella@gmail.com?subject=Reactie op formulier" method="post" enctype="text/plain">
+
+    <div class="form-row">
+        <label for="naam">Naam:</label>
+        <input type="text" name="naam"
+               id="naam" required="required"/>
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" name="voornaam"
+               id="voornaam" required="required"/>
+    </div>
+
+    <div class="form-row">
+        <label for="straat">Straat:</label>
+        <input type="text" name="straat"
+               id="straat" required="required"/>
+        <label for="nummer">Nummer:</label>
+        <input type="text" name="nummer"
+               id="nummer" required="required" size="5" maxlength="5"/>
+        <label for="bus">Bus:</label>
+        <input type="text" name="bus"
+               id="bus" required="required" size="4" maxlength="4"/>
+    </div>
+
+    <div class="form-row">
+        <label for="postnummer">Postnummer:</label>
+        <input type="text" name="postnummer"
+               id="postnummer" required="required" size="4" maxlength="4"/>
+        <label for="gemeente">Gemeente:</label>
+        <input type="text" name="gemeente"
+               id="gemeente" required="required"/>
+    </div>
+
+    <div class="form-row">
+        <label for="provincie">Provincie:</label>
+        <input type="text" name="provincie"
+               id="provincie" required="required"/>
+    </div>
+
+    <input type="reset" value="Alles wissen"/>
+    <input type="submit" value="Verzenden"/>
+</form>
+</body>
+</html>

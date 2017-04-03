@@ -1,0 +1,29 @@
+.text{
+    font-family:"Verdana", "Arial", "Times New Roman";
+    font-size: 10pt;
+}
+
+.red{
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: bold;
+}
+
+.huisstijl{
+    color: #00FF00;
+    letter-spacing: .01em;
+    word-spacing: 0.4em;
+    text-indent: 3em;
+    text-align: center;
+    background-image: url(back.gif);
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: 100% 100%;
+}
+
+p.red{
+    color: #FF0000;
+    font-size: 13pt;
+    font-family:bold;
+}

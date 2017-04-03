@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oef03: Berekenen met JavaScript</title>
+</head>
+<body>
+
+<form id="myForm">
+    <div class="form-row">
+    <input type="number" name="num1" id="num1" />
+    <input type="number" name="num2" id="num2" />
+        <output id="res"></output>
+    </div>
+</form>
+
+<script>
+    "use strict";
+document.getElementById("myForm").addEventListener("input",doeBerekening);
+function doeBerekening() {
+    var nummer1;
+    var nummer2;
+    var resultaat;
+    nummer1 = document.getElementById("num1").value;
+    nummer2 = document.getElementById("num2").value;
+    resultaat = nummer1 * nummer2;
+
+    if (nummer1 === ""|| nummer2 === "") {
+        document.getElementById("res").innerHTML = "";
+    } else if (!isNaN(resultaat)) {
+        document.getElementById("res").innerHTML = "Het product van " + nummer1 + " en " + nummer2 + " is " + resultaat;
+    } else {
+        document.getElementById("res").innerHTML = "Het waarde moet een nummer zijn!"
+    }
+
+
+}
+</script>
+</body>
+</html>

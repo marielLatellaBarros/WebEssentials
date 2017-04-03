@@ -1,0 +1,59 @@
+body {
+    color: whitesmoke;
+    background-color: lightgray;
+}
+article{
+    border: groove 2px lightslategray;
+    background-color: #5ea3de;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+header h1{
+    margin-top:5px;
+    margin-bottom: inherit;
+}
+
+article h3 {
+    margin-top:5px;
+    margin-bottom: inherit;
+}
+#headerIMG{
+    position:absolute;
+    top: 10px;
+    left:10px;
+    background-size:contain;
+}
+
+#headerIMG img {
+    height: 100%;
+    width:  100%;
+    vertical-align: middle;
+}
+#header{
+    position: absolute;
+    top: 10px;
+    left:250px;
+    width: 600px;
+}
+
+#inhoud{
+    position: absolute;
+    top: 160px;
+    left: 10px;
+    width:160px;
+    bottom: 10px;
+}
+.content{
+    display: block;
+    position: absolute;
+    top: 160px;
+    left: 180px;
+    width: 670px;
+    bottom: 10px;
+    background-color: #5188de;
+}

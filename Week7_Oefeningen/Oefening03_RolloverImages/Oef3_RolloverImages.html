@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oef3: Rollover images</title>
+</head>
+<body>
+
+<header>
+    <h1>Sandy Bridge microarchitectuur</h1>
+</header>
+
+<p>Beweeg over de logo's om de processor te zien</p>
+
+<div>
+<p>Gekozen processor = <output id="output"></output></p>
+</div>
+
+<img id="core3gif" src="images/core_i3_logo.gif">
+<img id="core5gif" src="images/core_i5_logo.gif">
+<img id="core7gif" src="images/core_i7_logo.gif">
+
+</body>
+
+<script>
+    "use strict";
+
+    (function() {
+
+       document.getElementById("core3gif").addEventListener("mouseover", changeImageSource)
+        function changeImageSource() {
+            {
+                document.getElementById("core3gif").src = "images/core_i3.jpg"
+                document.getElementById("output").innerHTML = "Core i3";
+            }
+        }
+        })();
+
+    (function() {
+        document.getElementById("core5gif").addEventListener("mouseover", changeImageSource)
+        function changeImageSource() {
+            {
+                document.getElementById("core5gif").src = "images/core_i5.jpg"
+                document.getElementById("output").innerHTML = "Core i5";
+            }
+        }
+        })();
+
+    (function() {
+        document.getElementById("core7gif").addEventListener("mouseover", changeImageSource)
+        function changeImageSource() {
+            {
+                document.getElementById("core7gif").src = "images/core_i7.jpg"
+                document.getElementById("output").innerHTML = "Core i7";
+            }
+        }
+    })();
+
+</script>
+</html>

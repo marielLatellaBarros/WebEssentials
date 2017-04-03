@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:br="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Structuur samples</title>
+</head>
+<body>
+
+<article id="deel1">
+    <h3>Deel1: Inleiding</h3>
+</article>
+
+<!--Dit is een paragraf voorbeeld-->
+<p>Dit is een paragraaf voorbeeld.</p>
+<p>Dit is een tweede paragraf.</p>
+<p>Dit is een derde paragraaf.</p>
+
+<!--Dit is een blockquote-->
+<blockquote>
+    <p>Dit is een blockquote die tekst bijhoudt.<br>
+    Die tekst springt automatisch in als je "br" schrijft.</p>
+</blockquote>
+
+<!--Dit is een preformatted tekst met hoodfing h1-->
+<pre>
+
+    <h1> Dit is een preformatted tabel met een Titel in h1 hoofding</h1>
+    --------------------------------
+    Product     Prijs       Aantal
+    --------------------------------
+    Item 1      25 EURO     4 stuks
+    Item 2      35 EURO     2 stuks
+    Item 3      45 EURO     1 stuks
+    --------------------------------
+</pre>
+
+<!--Zes verschillende koppen (headings) kan je kiezen, van h1 tot en met h6-->
+<h1>Zes verschillende koppen (headings) kan je kiezen, van h1 tot en met h6</h1>
+<h1>Koptitel 1</h1>
+<h2>Koptitel 2</h2>
+<h3>Koptitel 3</h3>
+<h4>Koptitel 4</h4>
+<H5>Koptitel 5</H5>
+<h6>Koptitel 6</h6>
+<p>Gewone paragraf</p>
+
+
+<!--Dit is een divisie-->
+<div>
+    <h2>Dit is een hoofding binnen een divisie.</h2>
+    <p>Een paragraaf binnen een divisie.</p>
+    <p>Hier kan je verschillende elementen groeperen</p>
+</div>
+
+<!--Verschillende elementen van de structuur-->
+<article id="deel2">
+    <h3>Deel2: Structuur</h3>
+</article>
+
+
+<section><h3>Dit is een section-element.</h3><br>
+    Bv: Een hoofdstuk in een boek of de eerste pagina van een blogpost met meerdere pagina's.<br>
+    Het komt het dichtst tegen het div-element.<br>
+    Het verschil met een article: op zichzelf zou kunnen bestaan.<br>
+    Het verschil met "aside": een aside kan worden weggelaten, het is extra.<br>
+    Een section kan andere sections en articles bevatten, die op hun beurt weer deelsections of aticles bevatten.
+</section>
+
+<main><h3>Dit is een main-element.</h3><br>
+Het belangrijkste inhoud van verschillende article-elementen houden hier bij.
+</main>
+
+<article><h3>Dit is een article-element.</h3><br>
+Het geeft een groep elementen aan met samenhorende inhoud binnen de huidige groep.<br>
+Vooral te gebruiken voor inhoud die eventueel van buitenaf zou kunnen worden ingevoerd.
+</article>
+
+<section class="agenda">
+    <article class="eventement"> bla </article>
+    <article class="eventement">...</article>
+</section>
+<section class="terugblik">
+    <article class="eventement verslag"></article>
+    <article class="eventement verslag">
+        <section class="fotoboek"></section>
+        <section class="interviews">
+            <article></article>
+            <article>
+                <p> bla </p>
+                <section class="comments"></section>
+            </article>
+        </section>
+    </article>
+</section>
+
+
+<header><h3>Dit is een header-element</h3><br>
+Het is een hulpmiddel met de inleidend (preliminary) of verwijzend (referring) karakter.<br>
+Het eerste kinderelement binnen de header is meestal een kopelelement.
+</header>
+
+
+<footer><h3>Dit is een footer-element</h3><br>
+Dit element kan per pagina meerdere keren voorkomen.<br>
+Bv: copyright informatie, links naar gerelateerde documenten en contactgegevens opgenomen.<br>
+Bij artikels: de auteur, de aanmaakdatum, enz</footer>
+
+<!--Dit is een Footer voorbeeld met een address blokelement-->
+<article>
+    <h4>Dit is een Footer voorbeeld met een address blokelement</h4>
+    <footer>
+        Auteur: <address><a href="mailto:mariel.latella@gmail.com">Mariel</a> </address>
+    </footer>
+    <p>De eigenlijk inhoud</p>
+</article>
+
+<nav><h3>Dit is nav-element</h3><br>
+Deze tags omvatten het hoofdmenu met navigatielinks van de webpagina, maar kan ook <br>
+gebruikt worden voor submenu's, inhoudstafels...<br>
+Dit is een voorbeeld van nav
+</nav>
+
+<nav>
+    <ul>
+        <li><a href="#">Hyperlink 1</a></li>
+        <li><a href="#">Hyperlink 2</a></li>
+    </ul>
+</nav>
+
+<aside><h3>Dit is aside-element</h3><br>
+    Gebruikt om een paginafragment aan te duiden dat zich in de marge van de hoofdpagina bevindt.<br>
+    Een extra kolom met bijkomende tekst die niet rechtstreeks gerelateerd is aan de eigenlijke inhoud.<br>
+    Bv: banner, reclame, een figuur... een wist-je-datje...
+</aside>
+
+<aside>
+    <h2>(voorbeeld): Ook dat nog...</h2>
+    <p>Wist je dat aside niet hetzelfde is als offside?</p>
+</aside>
+
+<!--INLINE ELEMENTEN-->
+<header>
+    <h4>Deze zijn inline-elementen</h4>
+</header>
+<h2>Dit is een line break.</h2>
+<p>Het creërt een regel zonder de bij<br>
+    "p"-tag horende blanco regel </p>
+
+<h2>Dit is een word break.</h2>
+<p>Als je angst voor lange woorden hebt, dan heb jij hipopoto<wbr    />monstro<wbr    />sesquippedalio<wbr />fobie.</p>
+
+
+<!--Tekstopmaaktags-->
+<header>
+    <h2>Dit zijn teksttags</h2>
+</header>
+    <p>Deze geven de auteur zeggenschap over de betekenis van di tekst.<br>
+    Ze ghebben ook een standardopmaak. Vb:</p><br>
+    <p>
+        Strong: <strong>Belangrijk, urgent. Om tekst vetter te zetten.</strong><br>
+        Bold: <b>Uitgelicht, maar zonder extra betekenis. Tekst in vette opmaak</b><br>
+        Iets belangrijk maken: STRONG. <br>
+
+        Emphasized:<em>Beklemtoond. Om tekst te benadrukken.</em><br>
+        Italic: <i>Andere stemming. Tekst in cursief</i><br>
+        Tekst een andere betekenis krijgt door de klemtoon op een deel te leggen: EMPHASIZED.<br>
+        Tekst als een droom: ITALIC.
+
+        Superscript: <sup>Superscript. Tekst in superscript</sup><br>
+        Subscript: <sub>Subscript. Tekst in subscript.</sub><br>
+
+        Insert: <ins>Ingevoegd. Toegevoegde tekst</ins><br>
+        Delete: <del>Gewist. Gewiste tekst.</del><br>
+        Strike: <s>Niet langer relevant. Doorhalen</s><br>
+
+        Underline: <u>Met een onuitgesproken niet tekstuele annotatie. Onderlijnde tekst. Afgeraden.</u><br>
+</p>
+
+<!--Logische elementen-->
+<header>
+    <h3>Logische elementen</h3>
+    <p>Gebruikt om een logische betekenis te geven aan flarden (incomplete) tekst. Vb:</p>
+</header>
+
+<h4>Computeruitvoer gebaseerd</h4>
+<p>
+    Code: <code> "code" om computercode weer te geven.</code><br>
+    Keyboard: <kbd>"kbd" om schrijfmachinetekst weer te geven </kbd><br>
+    Sample: <samp>"samp" om output van een programma weer te geven</samp><br>
+    Variable: <var>"var" om een variabele weer te geven</var><br>
+</p>
+
+<h4>Verwijzen naar citaten, definities, referenties</h4>
+<p>
+    Abbreviation: "abbr"<abbr> verkorte weergave</abbr><br>
+    Biderectional isolation: "bdi" <bdi>isoleert een stukje tekst voor tekstrichting.</bdi><br>
+    Biderectional override: "bdo"<bdo> richting van de tekst</bdo><br>
+    Cite: "cite"<cite> voor citeren van de titel van een werk (lief, blogpost, programma...)</cite><br>
+    Definition: "dfn" <dfn>voor definities</dfn><br>
+    Small: "small" <small> om een stukje tekst klein</small> te maken<br>
+    Quote: "q" <q> om een korte referentie aan te geven</q><br>
+</p>
+
+<h3>Span</h3>
+<p>Gebruikt om een stukje tekst opmaken met CSS zonder specifieke betekenis en zonder dat er al enige opmaak wordt
+    meegegeven.
+</p>
+
+
+
+<!--Entiteitsnamen-->
+
+<header>
+    <h3>Entiteitsnamen</h3>
+</header>
+
+<p>Voor het gebruik van speciale symbolen zijn er codes ontworpen: entiteitsnamen: </p>
+
+<pre>
+-------------------------------------------------------
+<       &lt;    &#60;   &#x3c;      kleiner dan
+>       &gt;    &#62;   &#x3e;      groter dan
+&       &amp;   &#38;   &#x26;      ampersand
+spatie  &nbsp;  &#32;   &#x20;      non breaking space
+"       &quot;  &#34;   &#x22;      dubbel aanghalingsteken
+-------------------------------------------------------
+</pre>
+
+
+<header>
+    <h4>Hyperlinks</h4>
+</header>
+
+<p> Verbinding leggen doe je met het <b>anchor element "a" </b> </p>
+<a href="http://www.destandaard.be">De Standaard</a><br>
+
+<p>De opmaak van hyperlinks dient met pseudoklassen gedefinieerd te worden in CSS.<br>
+Standaard zijn links altijd onderlijnd. De kleur geeft de status aan: <br><br>
+    a               {text-decoration:none;}                     <br>
+    a link:         {color:#0000ff}                             <br>
+    a visited:      {color:#000099}                             <br>
+    a hover:        {color:#ffffff; background-color:#0000ff;}  <br>
+    a active:       {color:#000099;}
+</p>
+
+<h3>Zie relatieve en absolute-documenten koppelingen</h3>
+
+<h3>Interne koppelingen</h3>
+<p>Gebruikt om een sprong te maken binnen een document.</p>
+<ul>
+    <li><a href="#deel1">Deel 1</a> </li>
+    <li><a href="#deel2">Deel 2</a> </li>
+    <li><a href="CStest.html#testlink">Test link naar een sectie in andere bestand</a></li>
+
+</ul>
+
+<a href="mailto:mariel.latella@gmail.com?cc:=ben.hinssen@gmail.com&amp;
+bcc=ben.hinssen@gmail.com&amp;subject=Sending%20email%20via%20myWebPage! Did you get 2? :)">
+    Click here to send email
+</a> <br>
+
+<a href="bordercollie.jpg">Download BorderCollie Pic</a><br>
+
+<a href="#">Back to the Top</a>
+
+</body>
+</html>

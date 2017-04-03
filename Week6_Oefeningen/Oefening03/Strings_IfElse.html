@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript: Strings en If-Else</title>
+</head>
+<body>
+
+<form>
+    <div class="form-row">
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" name="voornaam" id="voornaam"/>
+    </div>
+    <div class="form-row">
+        <label for="achternaam">Acthernaam:</label>
+        <input type="text" name="achternaam" id="achternaam"/>
+    </div>
+    <div class="form-row">
+        <input type="button" id="resultButton" value="Genereer melding"/>
+        <input type="text" id="message" name="message" size="50px"/>
+    </div>
+    <div class="form-row">
+        <input type="button" id="clearButton" value="Clear"/>
+    </div>
+</form>
+
+<script>
+    "use strict";
+    document.getElementById("resultButton").addEventListener("click", doeBerekening);
+    function doeBerekening() {
+        var voornaam;
+        var achternaam;
+        var boodschap;
+        voornaam = document.getElementById("voornaam").value;
+        achternaam = document.getElementById("achternaam").value;
+        boodschap = voornaam + " " + achternaam;
+        if (voornaam === "" || achternaam === "") {
+            document.getElementById("message").value = "Vul alle velden in, a.u.b."
+        } else {
+            document.getElementById("message").value = "Welkom " + boodschap;
+        }
+
+    }
+
+    document.getElementById("clearButton").addEventListener("click", clearFields);
+    function clearFields() {
+        document.getElementById("voornaam").value = "";
+        document.getElementById("achternaam").value = "";
+        document.getElementById("message").value = "";
+    }
+
+</script>
+</body>
+</html>

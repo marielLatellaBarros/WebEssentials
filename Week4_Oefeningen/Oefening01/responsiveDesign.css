@@ -1,0 +1,11 @@
+article {
+    float: left;
+    min-width:200px;
+    max-width: 300px;
+    margin-left: 20px;
+    background-color: whitesmoke;
+    border: solid 5px lightslategray;
+    border-radius: 5%;
+    padding: 10px;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oef12: Sentence Reverser</title>
+    <link rel="stylesheet" href="sentencereverser.css">
+</head>
+<body>
+    <div>
+        <label for="phrase">Phrase:</label>
+        <input type="text" name="phrase" id="phrase" size="50px"/>
+    </div>
+    <div>
+        <label for="filter">Filter:</label>
+        <input type="text" name="filter" id="filter"/>
+    </div>
+    <div>
+        <input type="button" id="go" value="Go!"/>
+    </div>
+    <div id="words">
+    </div>
+
+<script>
+    "use strict";
+    (function(){
+
+
+    document.getElementById("go").addEventListener("click", splitPhrase);
+
+    function splitPhrase() {
+
+        var phrase = document.getElementById("phrase").value;
+        var words = phrase.split(" ");
+//        for (let i = 0; i < words.length; i++){
+//            var newElement = document.createElement("div");
+//            newElement.innerHTML = words[i];
+//            document.getElementById("words").appendChild(newElement);
+
+//        }
+        for (let i = 0; i < words.length; i++){
+            newElement.innerHTML = words[i];
+
+        }
+    }
+
+    }) ();
+</script>
+</body>
+</html>

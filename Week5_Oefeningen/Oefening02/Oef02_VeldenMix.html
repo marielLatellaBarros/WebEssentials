@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Oef02: Velden Mix</title>
+    <link rel="stylesheet" href="veldenmix.css">
+
+</head>
+
+<body>
+<h1 align="center">Formulier</h1>
+<hr/>
+
+<form action="mailto:mariel.latella@gmail.com?subject=Formulier_test" method="post" enctype="text/plain">
+    <div class="form-row-flex">
+        <div>
+        <label for="naam">Naam:</label>
+        </div>
+        <div>
+        <input type="text" name="naam" id="naam" required="required"/><br>
+        </div>
+    </div>
+
+    <div class="form-row-flex">
+        <div>
+        <label for="password">Password:</label>
+        </div>
+        <div>
+        <input type="text" name="password" id="password" required="required"/>
+        </div>
+    </div>
+
+    <div class="form-row-flex">
+        <div>
+        <label for="land">Land:</label>
+        </div>
+        <div>
+        <select name="land" id="land">
+            <option value="België">België</option>
+            <option value="Italië">Italië</option>
+            <option value="Frankrijk">Frankrijk</option>
+            <option value="Argentinië">Argentinië</option>
+        </select>
+        </div>
+    </div>
+
+    <div class="form-row-flex">
+        <div>
+            <label>Geslacht</label>
+        </div>
+            <div>
+                <input type="radio" name="geslacht" id="mannelijk" value="mannelijk"/>
+                <label for="mannelijk">mannelijk</label>
+            <div>
+                <input type="radio" name="geslacht" id="vrouwelijk" value="vrouwelijk"/>
+                <label for="vrouwelijk">vrouwelijk</label>
+            </div>
+            <div>
+                <input type="radio" name="geslacht" id="transsexueel" value="trans"/>
+                <label for="transsexueel">transsexueel</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row-flex">
+        <div>
+            <label>Besturingssysteem</label>
+        </div>
+        <div>
+            <div>
+                <input type="checkbox" id="windows7" name="Windows7" value="Win7"/>
+                <label for="windows7">Windows7</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Windows8" name="Windows8" value="Win8"/>
+                <label for="Windows8">Windows8/8.1</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Windows10" name="Windows10" value="Win10"/>
+                <label for="Windows10">Windows10</label>
+            </div>
+            <div>
+                <input type="checkbox" id="lynux" name="lynux" value="Lynux"/>
+                <label for="lynux">Lynux</label>
+            </div>
+            <div>
+                <input type="checkbox" id="macOSX" name="macOSX" value="macOSX"/>
+                <label for="macOSX">MacOS X</label>
+            </div>
+        </div>
+        </div>
+
+        <div class="form-row-flex">
+            <div>
+                <label for="commentaar">Opmerkingen:</label>
+            </div>
+            <div>
+                <textarea cols="30"  id="commentaar"  name="commentaar"></textarea>
+            </div>
+
+        </div>
+
+        <input type="submit" value="Formulier verzenden"/>
+        <input type="reset" value="Alles wissen"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+.form-row-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px;
+}
+
+.form-row-flex label {
+    width: 15vw;
+    Display: inline-block;
+ }
+
+input[type="text"] {
+    background-color: #4abdac;
+}
+
+input[type="checkbox"] {
+    background-color: #FC4A1A;
+}
+
+textarea {
+    background-color: #4abdac;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 30ex;
+    resize: none;
+}
+
+#land{
+    background-color: #FC4A1A;
+}
+
+body{
+    background-color: #DfDcE3;
+}

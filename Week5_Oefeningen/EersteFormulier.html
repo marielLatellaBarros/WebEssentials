@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Eerste Formulier</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="eersteFormulier.css"/>
+</head>
+<body>
+<h1>Eerste Formulier</h1>
+<form action="mailto:mariel.latella@gmail.com" method="post" enctype="text/plain">
+    <div class="form-row">
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" name="voornaam"
+               id="voornaam" required="required"/>
+    </div>
+
+    <div class="form-row">
+        <label for="leeftijd">Leeftijd:</label>
+        <input type="number" name="leeftijd"
+               id="leeftijd" min="5" max="100" step="5"/>
+    </div>
+
+    <div class="form-row">
+        <label for="date">Favoriete datum: </label>
+        <input type="date" name="date"
+               id="date"/>
+    </div>
+    <div class="form-now">
+        <fieldset>
+            <legend>Je favoriete seizoen</legend>
+            <input type="checkbox" id="lente" name="lente" />
+            <label for="lente">Lente</label>
+            <input type="checkbox" id="zomer" name="zomer" />
+            <label for="zomer">Zomer</label>
+        </fieldset>
+    </div>
+
+    <div class="form-row">
+        <fieldset>
+            <legend>Je favoriete vakantie</legend>
+            <input type="radio" name="type_vakantie" id="strand"/>
+            <label for="strand">Strand-vakantie</label>
+            <input type="radio" name="type_vakantie" id="rugzak"/>
+            <label for="rugzak">Rugzak-vakantie</label>
+        </fieldset>
+    </div>
+
+    <div class="form-row">
+    <label for="bestemming">Waar wil je op vakantie?</label>
+    <input list="bestemmingenLijst" name="bestemming" id="bestemming" />
+        <datalist id="bestemmingenLijst">
+            <option value="België">België</option>
+            <option value="Italië">Italië</option>
+            <option value="Frankrijk">Frankrijk</option>
+            <option value="Argentinië">Argentinië</option>
+        </datalist>
+    </div>
+
+    <div class="form-row">
+        <label for="bestemming2">Nog een keer: Waar wil je op vakantie?</label>
+        <select name="bestemming2" id="bestemming2"> <!--select met option meest gebruikt, niet datalist!-->
+            <option value="België">België</option>
+            <option value="Italië">Italië</option>
+            <option value="Frankrijk">Frankrijk</option>
+            <option value="Argentinië">Argentinië</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Verzenden"/>
+
+
+</form>
+</body>
+</html>

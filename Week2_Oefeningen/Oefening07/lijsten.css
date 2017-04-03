@@ -1,0 +1,9 @@
+nav>ul>li>div{
+    color: blue;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+nav>ul>li>ul>li>h3{
+    font-weight: bold;
+}

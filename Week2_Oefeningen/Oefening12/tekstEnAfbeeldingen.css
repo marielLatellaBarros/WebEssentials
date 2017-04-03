@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: yellow;
+    font-size:20pt;
+    font-family: "Comic Sans MS", serif;
+}
+#main{
+    display: block;
+    margin-left: 80pt;
+
+}
+ #website {
+     text-decoration: none;
+     font-size: 1em;
+     color: yellow;
+ }
+
+ #chicks {
+     margin-left: 200pt;
+ }
+

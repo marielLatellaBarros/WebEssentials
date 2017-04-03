@@ -1,0 +1,33 @@
+p{
+    font-size: 15pt;
+    line-height: 20pt;
+    margin-left:1in;
+    margin-right:1in;
+    text-indent: .5in;
+}
+
+h1, h2 {
+    font-family: "Bodoni 72 Oldstyle" , serif;
+}
+
+
+p{
+    border-style: solid;
+    border-width: 2px 10px 4px 20px; /* top, right, bottom, left */
+    border-color: red;
+
+    font-family: Times, serif;
+    font-size: 12pt;
+    line-height: 20pt;
+    font-weight:bold;
+    font-style: italic;
+
+/* verkorte schrijfwize voor font styles
+Voor de font declaratie moeten WEIGHT en STYLE bijvoorbeeld eerst gespecificeerd worden.
+
+p{
+    border: 2px dashed red;
+    font: bold italic 12pt/20pt Times, serif;
+}
+*/
+

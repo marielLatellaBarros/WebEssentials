@@ -1,0 +1,31 @@
+body{
+    font-size:18px;
+    background-color: lightgoldenrodyellow;
+}
+
+#p1 {
+    font-family:Arial, Times, sans-serif;
+}
+
+#p2 {
+    font-family:Courier, "Times New Roman", sans-serif;
+}
+
+#p3 {
+    font-family:bla, sans-serif;
+}
+
+#p4 {
+    font-family:bla, ble, "Comic Sans MS", sans-serif;
+}
+
+#p5 {
+    font-family:bla, ble, bli, blo, "American Typewriter", sans-serif;
+    color: darkgoldenrod;
+    font-size: 16px;
+}
+
+.genius {
+    font-size: 2em;
+    color: darksalmon;
+}

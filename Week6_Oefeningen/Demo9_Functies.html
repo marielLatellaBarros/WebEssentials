@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=“nl”>
+<head>
+    Auteur: Johan Cleuren DOM 18
+    <meta charset="UTF-8">
+    <title>Demo9: functie</title>
+</head>
+<body>
+<output id="square"></output>
+<output id="cube"></output>
+<script>
+    "use strict";
+    var getal1 = 5;
+    var getal2 = 4;
+    document.getElementById("square").innerHTML = square(getal1);
+    // bovenstaande regel geeft: "Uncaught TypeError: square is not a function"
+    document.getElementById("cube").innerHTML = cube(getal1);
+    var square = function(x) {
+        return x * x;
+    };
+    function cube(x) {
+        return x * x * x;
+    }
+    document.getElementById("square").innerHTML = square(getal2);
+    document.getElementById("cube").innerHTML = cube(getal2);
+</script>
+</body>
+</html>

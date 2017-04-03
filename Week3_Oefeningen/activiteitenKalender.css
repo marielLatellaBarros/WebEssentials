@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+    background-color: #FCC46B;
+    border-color: #BA0227;
+    font-family: "American Typewriter";
+    table-layout: fixed;
+}
+
+th {
+    background-color: #BA0227;
+    color: white;
+}

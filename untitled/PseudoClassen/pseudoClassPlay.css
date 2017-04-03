@@ -1,0 +1,60 @@
+a.bold:link {
+    color:#999999;
+    text-decoration: underline;
+    font-weight:bold;
+}
+a.bold:visited{
+    color:#00FF00;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+a.bold:hover{
+    color:#FF0000;
+    text-decoration: underline;
+    font-weight:normal;
+}
+
+p::first-line{
+    font-family: "Bodoni 72 Oldstyle" , serif;
+}
+
+#naam {p::first-letter {
+    font-size: 5em;
+}
+}
+
+* {font-style: italic}
+
+.blue{
+    color: blue;
+}
+
+.vet{
+    font-weight: bold;
+}
+
+.cursief{
+    font-style: italic;
+}
+
+p.geel.cursief{
+    background-color: red;
+}
+/*
+div h1 strong {
+    color: gray;
+}
+*/
+
+div>h1>strong{
+    color: gray;
+}
+
+h1 + p{
+    text-indent: 10px;
+}
+
+div{
+    background-color: rgba(60%,40,10,0.5);
+}

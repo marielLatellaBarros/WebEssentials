@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playing with CSS</title>
+
+    <!--link rel="stylesheet" href="playingWithCSS.css">-->
+    <!--met rel="alternate sytlesheet" kan je alternatieve stijlbestanden laden-->
+
+    <!--link om meerdere stylebestanden te kunnen importeeren. NADEL:
+    niet ondersteund wordt door sommige oudere browsers:
+    <style type="text/css">
+        @import url(playingWithCSS.css);
+    </style>
+    -->
+
+    <!--OPLOSSING: gebruik <link> in HTML en @import in externe stijlbestand
+    In HTML:
+    <link rel="stylesheet" href="playingWithCSS.css/>"
+    In CSS playingWithCSS.css:
+    @import url(tableFormat.css;
+    @import url(paragraphFormat.css);
+    etc... 
+    -->
+
+    <style>
+        body {
+            margin: 10px;
+            background-color: #999999;
+        }
+
+        p{
+            font: 10pt/14pt Verdana, Arial, Geneva, sans-serif;
+            margin: 1em .5em;
+            text-indent: 15px;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h1>This is header1</h1>
+    <h2>This is header2</h2>
+</header>
+
+<main>
+<article>
+    <p>This is some tekst to play with.</p>
+
+    <p style="color: red; font-family:'New Century Schoolbook', serif; font-size: large;">This paragraph is styled
+        in red with the New Century Schoolbook font, if available.</p>
+</article>
+</main>
+
+</body>
+</html>

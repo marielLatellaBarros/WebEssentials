@@ -1,0 +1,17 @@
+#voorbeeldbox{
+    width:300px;
+    padding:20px;
+    border: outset;
+    margin: 20px;
+    float: right;
+    background-color: silver;
+}
+
+#shadow{
+    box-shadow: blue 5px 15px 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}

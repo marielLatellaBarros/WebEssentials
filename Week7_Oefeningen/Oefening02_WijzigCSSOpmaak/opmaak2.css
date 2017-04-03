@@ -1,0 +1,19 @@
+body{
+    background: #81b392;
+    font-family: Times;
+}
+
+h1 {
+    text-align: left;
+    color: #f0778c;
+}
+
+#paragraph {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+footer {
+    color: #315180;
+    font-weight: bold;
+}
