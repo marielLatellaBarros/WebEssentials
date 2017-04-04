@@ -6,7 +6,14 @@
 
 <p id="demo">JavaScript can change HTML content.</p>
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<button id="clickMe" type="button">Click Me!</button>
 
+<script>
+    document.getElementById("clickMe").addEventListener("click", displayText);
+    function displayText() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+
+</script>
 </body>
 </html>
