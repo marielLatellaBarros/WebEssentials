@@ -8,11 +8,25 @@
 
 <p>In this case JavaScript changes the src (source) attribute of an image.</p>
 
-<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+<button id="on">Turn on</button>
 
-<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+<img id="myImage" src="images/core_i3_logo.gif" style="width:100px">
 
-<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+<button id="off">Turn off</button>
+
+<script>
+    "use strict";
+    document.getElementById("on").addEventListener("click", TurnOn);
+    function TurnOn() {
+        document.getElementById("myImage").src="images/core_i3.jpg";
+    }
+
+    document.getElementById("off").addEventListener("click", TurnOff);
+    function TurnOff() {
+        document.getElementById("myImage").src="images/core_i3_logo.gif";
+    }
+
+</script>
 
 </body>
 </html>
