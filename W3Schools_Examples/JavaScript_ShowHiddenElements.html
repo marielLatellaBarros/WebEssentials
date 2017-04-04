@@ -8,7 +8,16 @@
 
 <p id="demo" style="display:none">Hello JavaScript!</p>
 
-<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+<button id="clickMe" type="button">Click Me!</button>
+
+<script>
+    "use strict";
+
+    document.getElementById("clickMe").addEventListener("click", ShowHidden);
+    function ShowHidden() {
+        document.getElementById("demo").style.display="block";
+    }
+</script>
 
 </body>
 </html>
