@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oef05: ASCII-tabel</title>
+    <style>
+        table, td {
+            border: 2px solid black;
+        }
+
+        table tr:first-child td {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>De ASCII-table</h1>
+<output id="output"></output>
+
+
+<script>
+    "use strict";
+
+    var table = "<table>";
+
+    table += "<tr>";
+    for (let i = 0; i < 4; i++)
+    {
+        table+="<td>Dec</td><td>Hex</td><td>Char</td>";
+    }
+    table +="</tr>";
+
+    for (let i = 0; i < 64; i++) {
+
+        table += "<td>" + i + "</td>";
+        table += "<td>" + i.toString(16) + "</td>";
+        table += "<td>" + String.fromCodePoint(i) + "</td>";
+
+        table += "<td>" + (i+64) + "</td>";
+        table += "<td>" + (i+64).toString(16) + "</td>";
+        table += "<td>" + String.fromCodePoint(i+64) + "</td>";
+
+        table += "<td>" + (i+128) + "</td>";
+        table += "<td>" + (i+128).toString(16) + "</td>";
+        table += "<td>" + String.fromCodePoint(i+128) + "</td>";
+
+        table += "<td>" + (i+192) + "</td>";
+        table += "<td>" + (i+192).toString(16) + "</td>";
+        table += "<td>" + String.fromCodePoint(i+192) + "</td>";
+
+
+        table += "</tr>";
+
+    }
+    table += "</table>";
+
+
+    document.getElementById("output").innerHTML = table;
+</script>
+
+</body>
+</html>
