@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oef4: Tafels</title>
+    <link rel="stylesheet" href="tafels_2.css">
+</head>
+<body>
+<header>
+    <h1>Tafels</h1>
+</header>
+
+<div>
+    <select name="number" id="number">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <input id="calculate" type="button" value="Toon tafel"/>
+    <button id="showResult" type="button">Show results</button>
+</div>
+
+<div id="output"></div>
+
+
+
+<script>
+    "use strict";
+    document.getElementById("calculate").addEventListener("click",displayTable);
+    function displayTable() {
+        {
+            var number = document.getElementById("number").value;
+            var text = "";
+
+            for (let i = 0; i <= 10; i++) {
+                var res = number * i;
+                text += number + " x " + i + " = " + " <span class='result'>  + res + "</span><br/>";
+            }
+            document.getElementById("output").innerHTML = text;
+        }
+    }
+    document.getElementById("showResult").addEventListener("click",showResults);
+    function showResults() {
+
+    }
+
+
+
+
+</script>
+</body>
+</html>
