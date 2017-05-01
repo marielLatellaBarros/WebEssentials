@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML and CSS: Intro</title>
+</head>
+<body>
+<h1>Making a web page with HTML and CSS
+    <ul>
+    <li>Writing HTML text tags and CSS selectors</li>
+    <li>Laying out a web page with multiple sections</li>
+    <li>Working with images on a web page</li>
+    <li>Customizing fonts and building HTML forms</li>
+</ul>
+</h1>
+
+<h2>Writing HTML text tags and CSS selectors</h2>
+
+<!--THE BOX MODEL
+Every tag is contained in an invisible rectangle called the BOX.
+BLOCK-Level tags take up the entire width of the container,
+Such as: h1, h2, h3, ..., p, ul, li, div.
+Others are called INLINE-level and they don't take up more space than the one they need...
+Such as a, img, input and label.
+
+SOMETIMES, you want block-levels to work as inline...Or vice-versa!
+
+EXAMPLE: you want list items to display horizontally instead of vertically:
+take all children from an unordered lis (ul li) and set them to display: inline!
+ul li {
+ display:inline;
+}
+
+THE BOX MODEL has 4 parts:
+1. Content area: contains the actual text, images, etc. (h1, h2, p...)
+2. Padding: from the content area outwards. Options are top, right, bottom, left.
+3. Border: from the padding area outwards. Options are top, right, bottom, left.
+4. Margin: from the border area outwards. Options are top, right, bottom, left.
+
+CALCULATE SIZE OF THE BOX:
+content area width + padding-left / padding-right + border-left / border-right + marging-left / margin-right
+
+EXAMPLE:
+h2 {
+  padding: 6px 3px 0 0; //top, right, bottom, left
+}
+
+h3 {
+ border: 6px solid black; //width, style, color to all sides of the border OR
+}
+
+h3 {
+ border-bottom: 6px solid black; //width, style, color to only the bottom
+}
+
+WHEN TO USE PADDING:
+To adjust spacing INSIDE a container.
+Used to control the size of a box without changing the size of the content inside the box.
+It makes the spaces between one box and the other one just bigger. Content inside does not change.
+
+WHEN TO USE MARGIN:
+To adjust spacing BETWEEN containers.
+
+
+Every browser has a standard stylesheet that adds standard spaces to all the tags we create.
+To reset these styles:
+html, body, h1, h2, h3, ol, ul, li, a {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+this is important to start a baseline!
+
+
+A BOX MODEL sample:
+Think of margins, then borders
+Start from the highest element <body>. This pushes all the children away from the edges of the <body>.
+body {
+  padding: 20px 20px 20px 20px;
+}
+
+Then move to the most important part of the document, the <h1>. With this margin we put vertical space between tags.
+h1 {
+  margin: 10px 0 15px 0;
+}
+
+Also with other parts of the document to add some "air" between the containers:
+h2 {
+  margin: 10px 0 20px 0;
+}
+
+Also with other parts of the document to add some "air" between the containers:
+h3 {
+  margin: 15px 0 15px 0;
+}
+
+A BORDER for a container can be used as a nice division-line effect!...
+h3 {
+  margin: 15px 0 15px 0;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 3px; // this adds a little space between the text and the line :)
+}
+
+PADDING can also be used to adjust list and list item indentation!
+We want to add the padding to the list, and not to the items inside!
+We do this adding a LEFT-PADDING to both ul and ol:
+ul {
+  padding: 0 0 0 50px;
+}
+
+ol {
+  padding: 0 0 0 50px;
+}
+
+
+--------------------------------------------------------------------------------------------------
+CLASSES
+Use "class" attribute to an HTML tag to access it directly in CSS
+<ul class="nav"><li>...</li>
+
+in CSS:
+.nav {
+padding-left: 0;
+}
+
+
+--------------------------------------------------------------------------------------------------
+DIVS AND LAYOUT
+A div is a block, this means it will take all the horizontal space available.
+But what happens if we want to for example, center a div in the middle of the page?
+FIXED-size:
+ "width: 500px;"
+ The content will automatically re-flow the fit in those 500px-space.
+ Center the fixed-size div depends on the type of content you are centering, there are 2 ways:
+ 1. Center a whole fixed-width block => set left and right margins to "auto":
+    margin: 30px auto 0 auto; //the left and right margins are trying to take as much space as they can, and
+    by doing this, they're pushing the content to the center.
+ 2. Center content that is INSIDE a block, for example, a title header, then we need to set the text-align to center:
+    text-align: center
+
+
+--------------------------------------------------------------------------------------------------
+IMAGES
+There are 3 types of web-images:
+1. CONTENT-images: just as necessary as the text to the web-page. For example, On Booking.com, the images of the hotels
+                   that help you decide what to book.
+2. LAYOUT-images: they appear on the background of the page, but they're not necessary to understand the content.
+3. USER-INTERFACE-images: they help navigate a side, not necessarily to understand to content. For example, arrows-down
+                   in the Decathlon menu to buy stuff.
+
+An image is created with the <img> tag. Same as <link>, <img> s an EMPTY-tag.
+Which image to display? Use the src attribute:
+<img src="cake.png">
+It makes sense though to put all images in one folder:
+<img src="images/cake.png">
+Use the alt attribute to put a description of the picture: ==> ACCESSIBILITY
+<img src="images/cake.png" alt="Magic Cake Photo">
+
+PROBLEM: What happens when you add an image as part of a list-item?
+A list-item is a block, so it will put all the images on top of each other, instead of side-by-side...
+But how do we fix it to show images side by side?
+We need to remove the bullet points (list-style-type: none;) and the padding set it to 0:
+.photos {
+    list-style-type: none;
+    padding: 0;
+}
+Then we need to change the block-style to inline to show the images horizontally,
+for all the list-items, and leave some air in between:
+.photos li {
+   display: inline;
+   padding-left: 10px;
+}
+
+
+IMAGES are also used to display a logo
+Because an image is an inline-level, it can't be centered with text-align.
+WE CONVERT INLINE TO BLOCK! => We need to use display: block and center it with margin: auto.
+.header img {
+   display: block;
+   margin: 0 auto 0 auto;
+}
+
+IMAGES as background
+They are added in CSS!
+There are several properties to consider:
+1. Set a background color default in case the background-image fails to load
+
+If a background color is dark, then it makes sense to set a background color to dark grey.
+body {
+background-color: #5f5f5f;
+}
+
+Set the background image (it can be a relative or absolute image)
+body {
+    background-color: #5f5f5f; /*sets a background color for the body in case the background image fails to load */
+    background-image: url(images/pinkDust.png) /* background image source */
+    background-position: top left;/* we're taking the small background image and we make it appear in the left top corner */
+    background-repeat: repeat; /* if image is small, use this to repeat it all over the page!*/
+}
+
+Which is the same as: color image position repeat
+body {
+    background: #5f5f5f url(images/pinkDust.png) top left repeat;
+}
+
+We can also do the other way around, and write on top of a background image.
+We ned to create a div to contain this background image and then puts text tags inside of it.
+
+
+DISPLAY AN IMAGE ON THE SIDE OF A BLOCK
+An image is an inline-level tag... But a text is a block-level tag!
+How can we make an inline-level tag sit aside of 2 block-level tags? ==> FLOAT
+
+FLOAT
+float is going to grant inline blocks "temporary powers" to allow them to take some of that space
+the block is fighting for
+EXAMPLE:
+<ul class="recipes">
+        <li>
+            <img src="images/cake1.jpeg" alt="Cake Photo">
+            <h3><a href="magic-cake.html">Magic Cake</a></h3>
+            <p>This is a dangerously delicious cake.</p>
+        </li>
+
+in CSS:
+.recipes img {
+ float: float;
+}
+
+ --------------------------------------------------------------------------------------------------
+ FONTS
+ Setup always a default font.
+ font-family: Verdana, "Times New Roman" serif;
+
+ Also, set all fonts to their neutral values at th very beginning of the css:
+ font-size: 100%;
+
+ Font properties:
+
+ .footer p {
+  color: #aaaaaa;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
+  text-transform: uppercase;
+ }
+
+<div class="footer">
+    <p>&copy; 2014 - Recipe World</p>
+</div>
+
+
+Adjusting the space in between the lines of a text ==> "line-height"
+It's like the single spacing, double spacing. etc from Word.
+
+--------------------------------------------------------------------------------------------------
+CREATING WEB-FORMS
+form - label - input - submit
+
+There are several types of input you can have like, this is a list with the most common ones:
+(input does NOT use a closing tag!)
+
+<input type="text"> to write little text
+<input type="checkbox"> to select multiple options
+<input type="radio"> to choose options
+<input type="file"> for file uploads
+<input type="password"> everything you write appears with the little black balls
+<input type="submit">
+
+How do we associate labels and the input? label + for and input + id:
+  <label for="recipe-name">Recipe Name</label>
+  <input type="text" id="recipe-name">
+
+What if I want to write more text? use => "textarea" (WITH closing tag!)
+ <textarea id="ingredients"></textarea>
+
+Styling labels and input: PROBLEM: these are inline, so they will pile up next to each other.
+solution: Treat the as BLOCK.
+
+label, input {
+    display: block;
+}
+label {
+    margin-bottom: 10px;
+}
+input {
+    width: 500px;
+    margin-bottom: 25px;
+}
+
+This gives a little problem, the submit button is also type input, but we do not want it to get that big...
+We can fix is with a special "attribute selector" => these are a way to style a tag based on one of its attributes.
+input[type=submit] {
+    width:120px;
+    font-size: 30px;
+}
+
+We can also use this to style the borders of the input text boxes:
+input[type=text] {
+    border: 2px solid #7facaa;
+}
+
+
+How do we change the size of an input box? Two ways: Or we adjust the font-size or the padding:
+1.
+input[type=text] {
+    border: 2px solid #7facaa;
+    font-size: 24px;
+    padding: 7px;
+}
+
+We do want to show checkboxes next to their labels... how do we do it? Back to inline!
+input[type=checkbox], label[for=newsletter] {
+    display: inline;
+}
+-->
+</body>
+</html>
