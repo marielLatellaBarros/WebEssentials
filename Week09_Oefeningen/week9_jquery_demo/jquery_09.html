@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery - bind</title>
+    <style>
+        p {
+            background: yellow;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        p.over {
+            background: #ccc;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //As of jQuery 3.0, .bind() has been deprecated
+            $("p").bind("click", function (event) {
+                var str = "( " + event.pageX + ", " + event.pageY + " )";
+                $("span").text("Click happened! " + str);
+            });
+            $("p").bind("dblclick", function () {
+                $("span").text("Double-click happened!");
+            });
+            $("p").bind("mouseenter mouseleave", function (event) { //why the event here?
+                $(this).toggleClass("over");
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>Bind (as of jQuery 3.0 deprecated. Better .on() ) - Bind click, dblclick, mouseenter mouseleave, toggleClass</h1>
+<div>
+    When the document is ready call function.<br>
+    1. Attach ("bind") a handler to a "click"-event for the element "p" and get the coordinates of X and Y.<br>
+    Then attach these coordinates to the "span" element.<br>
+
+    2. Attache ("bind") a handler to a "dblclick"-event for the element "p" and when a double click happens, the text
+    in the "span" element changes to "Double-click happened".<br>
+
+    3. Attache ("bind") a handler to a "mouseenter mouseleave"-event for the element "p" and when the mouse enters or
+    leaves the paragraph, the background in <b>this</b> element (so, "p") <b>"toggles a Class"</b> to a different color.
+    in the "span" element changes to "Double-click happened".
+</div>
+
+<p>Click or double click here.</p>
+
+<span></span>
+
+</body>
+</html>

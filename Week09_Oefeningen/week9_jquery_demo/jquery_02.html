@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Voorbeeld2</title>
+        <meta charset="UTF-8">
+        <script  src="scripts/jquery-3.2.1.min.js"></script>
+        <script >
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("#output").html("<h1>Geklikt</h1>");
+                    $("#btn").css("display","none");
+                });
+            });
+        </script>
+    </head>
+    <body>
+    <h1>Create a new HTML-element inside a"div". Hide an existing element ("button")</h1>
+    <p>USING: JQUERY: When the document is ready, call the GENERIC function and listen for a click event on the ID #btn.<br>
+    When a click happens, then CREATE A NEW HTML-element "h1" with text "Geklikt" in the ID #output. <br>
+    Also, change the style for the ID #btn to hide with display: none.</p>
+
+        <div id="output"></div>
+	<input type="button" id="btn" value="klik op mij">
+    </body>
+</html>
+

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery - prevent2</title>
+  <style>
+  	.leeg {
+  		color: red;
+  		background-color: yellow;
+  	}
+  	input {
+    	color: black;
+  		background-color: white;		
+  	}
+  </style>
+  <script  src="scripts/jquery-3.2.1.min.js"></script>
+  <script >
+$(document).ready(function(){
+	$("input[type='submit']").click(function(event) {
+		$("input[type='text']").each(function() {
+			if($(this).empty() && $(this).val().trim() === ""){
+            //if($(this).empty()) { // *if I type a space it still recognizes it as empty!
+                event.preventDefault();
+				$(this).toggleClass("leeg")
+					.val("geef een waarde in");	
+			}    
+		});
+	});
+});
+</script>
+</head>
+<body>
+<h1>Use in client-side validation - prevent "submit" if fields are empty</h1>
+<p>
+    When document is ready call generic function.<br>
+    Listen for a click-event on the input type "submit" and when this happens, for each input type "text" evaluate:<br>
+    - if the active input-box is empty AND the value of this element trimmed is also "", then<br>
+        for this element, toggleClass "leeg" and add the text value "geef een waarde in".
+</p>
+	<form action="verwerk.php" method="get">
+
+        <label for id="naam">Naam:</label>
+        <input type="text" name="naam" /><br />
+
+        <label for id="voornaam">Voornaam:</label>
+        <input type="text" name="voornaam" /><br />
+
+        <input type="submit" value="Verzenden" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery - filter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btnRood').click(function () {
+                $('li').first().css("color", "red");
+            });
+            $('#btnGroenBlauw').click(function () {
+                $('li').first().css("color", "green")
+                    .next().css("color", "blue")
+                    .nextAll().css("color", "green");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+<h1>Walk the DOM using traversing - first, next, nextAll</h1>
+<p>
+    When the document is ready, call generic function.<br>
+    When the ID "#btnRood" is clicked, call generic function:<br>
+    Change the color of the first 'li' element <b>($('li').first() = $('li:first'))</b>, in the document.<br>
+    DO NOT look at the hierarchy.<br>
+
+    When the ID "#btnGroenBlauw" is clicked, call generic function:<br>
+    Look at the first 'li' element (index 0) and change its color to "green".<br>
+    Then look at the next element (index 1) and change its color to "blue".<br>
+    Then look at all the following elements after "first" and change their color to green.
+    DO NOT look at the hierarchy.<br>
+
+</p>
+<ul>
+    <li>eerste element</li>
+    <li>tweede element</li>
+    <li>derde element</li>
+</ul>
+
+
+<ul>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+<input type="button" id="btnRood" value="rood"></input>
+<input type="button" id="btnGroenBlauw" value="groen blauw"></input>
+
+</body>
+</html>
+

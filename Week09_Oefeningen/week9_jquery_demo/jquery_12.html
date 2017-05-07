@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery - fade</title>
+    <style type="text/css">
+        #div1, #div2 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #div2 {
+            display: none;
+            background-color: blue;
+        }
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#div1').click(function () {
+                $(this).fadeOut(3000, "swing", function () {
+                    $("#div2").fadeIn(3000);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>Fadeout and FadeIn</h1>
+<p>
+    When the document is ready, call generic function.<br>
+    Listen for a "click-event" for ID "#div1" and when this happens for "this" #div1 <b>fade out</b> at 3000 milliseconds
+    (3 seconds) AND call another generic function that looks at ID "#div2" (initially display: "none") that
+    <b>fades in</b> at 3000 milliseconds.<br>
+     Note:  - default values: [duration: 400 milliseconds], [easing: "swing"], [complete]. <br>
+            - 'fast' (200 milliseconds) and 'slow' (600 miliseconds).<br>
+            - Once the opacity is 0 (100% see-through), the display is set to: none.<br>
+            - <b>FadeIn()</b> sets the css display from "none" to "block".<br>
+</p>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</html>

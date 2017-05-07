@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery - event.preventDefault</title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").click(function (event) {
+                event.preventDefault();
+                $("<div>")
+                    .append("default " + event.type + " prevented")
+                    .appendTo("#log");
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>event (event.preventDefault()) - prevent default behaviour</h1>
+<p>
+    When the document is ready, call generic function.<br>
+    When an "a" (anchor) is clicked then prevent the normal behaviour of redirecting you to the page link.<br>
+    the "event" represents, in this case, the "click". The name can be <b>arbitrary</b>.
+</p>
+<a href="http://jquery.com">default click action is prevented</a>
+<div id="log"></div>
+
+
+</body>
+</html>

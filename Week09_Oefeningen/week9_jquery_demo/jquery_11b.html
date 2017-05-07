@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery - prevent2</title>
+    <style>
+        .leeg {
+            color: red;
+            background-color: yellow;
+        }
+
+        input {
+            color: black;
+            background-color: white;
+        }
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input[type='submit']").click(function (event) {
+                $("span[class='foutmelding']").remove;
+                var fout = false;
+                $("input[type='text']").each(function () {
+                    if ($(this).empty() && $(this).val().trim() === "") {
+                        var span = $("<span>")
+                            .css("color", "red")
+                            .attr("class", "foutmelding")
+                            .append("geef een waarde in");
+                        $(this).after(span);
+                        fout = true;
+                    }
+                });
+                if (fout) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>event (event.preventDefault()) - prevent default behaviour IF a condition evaluates to TRUE</h1>
+<h2>Create a span "style" for the input text and remove it before it gets created again.</h2>
+<p>
+    When the document is ready, call generic function.<br>
+    Listen for a click on the input type "submit", and remove the class "foutmelding".<br>
+    Set variable "fout" to false.<br>
+    For each input type "text" do the following:
+    - if this element is empty, then create a "span" style (no need to close it) and put it after "this".<br>
+    - set fout to "true" because now there is no text in the input box.<br>
+    - evaluate if fout is true, and if so, then prevent the event from happening (prevent the "click" event from the
+      submit button.
+</p>
+<form action="verwerk.php" method="get">
+
+    <label for id="naam">Naam:</label>
+    <input type="text" name="naam"/><br/>
+
+    <label for id="voornaam">Voornaam:</label>
+    <input type="text" name="voornaam"/><br/>
+
+    <input type="submit" value="Verzenden"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery voorbeeld 1</title>
+        <meta charset="UTF-8">
+        <script  src="scripts/jquery-3.2.1.min.js"></script>
+        <script >
+            $(document).ready(toonHelloWorld);
+			function toonHelloWorld(){
+        		$('#output').html("<h1>Hello World</h1>");
+            }
+        </script>
+    </head>
+    <body>
+    <h1>Create a new HTML-element inside a "div", calling a specific function</h1>
+    <p>When the document is ready, call SPECIFIC function "toonHelloWorld"  and in the ID #output
+        CREATE A NEW HTML-element "h1" with content "Hello World".</p>
+
+    <div id="output"> </div>
+    </body>
+</html>
+

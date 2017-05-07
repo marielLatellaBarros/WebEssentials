@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery voorbeeld 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input {
+            margin: 2px;
+        }
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                var tekst = $(":text").val();
+                //$("input#input").val("");
+                $(":text").val("dsjkfldsjkfldsjfl");
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>( $(":text").val() ) - Select all elements of the same type and add the same value to them</h1>
+<p>
+    When document is ready, call generic function: <br>
+    Look for any click events on ID "#btn" and call generic function:<br>
+    - select all input elements of type ":text" (<"input type=text">), and add the value "dsjkl..."
+</p>
+<div>
+    <input type="text" id="input"/>
+</div>
+<div>
+    <input type="text" id="output"/>
+    <input type="button" id="btn" value="klik"/>
+</div>
+</body>
+</html>
+
