@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Samples: Expand the on()</title>
+    <script src="../../scripts/jquery.js"></script>
+
+    <script> //when the document is loaded, watch for an event
+    //Examples: 'click', 'focusin', 'mousedown', 'mousemove', 'mouseover', 'mouseenter', 'dbclick', 'focusout',
+    // 'mouseup', 'mouseout', 'mouseleave'
+    //call a function without (). The () means the function will be invoked when the document loads, and sometimes we
+        //want a function only when an event is triggered.
+
+    //When the mouse enters on that li, depart from this element and find the span. Then toggle.
+
+//    $(document).ready(function() {
+//        $('#tour').on('click', 'button', function() {
+//            $('.photos').slideToggle();
+//        });
+//        $('.photos').on('mouseenter', 'li', function() {
+//            $(this).find('span').slideToggle(); //REFACTOR
+//        });
+//        $('.photos').on('mouseleave', 'li', function() {
+//            $(this).find('span').slideToggle(); //REFACTOR
+//        });
+//    });
+
+    $(document).ready(function() {
+        $('#tour').on('click', 'button', function() {
+            $('.photos').slideToggle();
+        });
+
+        function showPhotos() {
+            $(this).find('span').slideToggle();
+        }
+
+        $('.photos').on('mouseenter', 'li', showPhotos);
+        $('.photos').on('mouseleave', 'li', showPhotos);
+    });
+
+    </script>
+
+    <style>
+        body {
+            color: black;
+        }
+
+        .photos {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="tour">
+    <h2>Paris, France Tour</h2>
+    <p>$2,499 for 7 Nights</p>
+    <button>See photos from our last tour</button>
+    <ul class="photos">
+        <li>
+            <img src="/assets/photos/paris1.jpg">
+            <span>Arc de Triomphe</span>
+        </li>
+        <li>
+            <img src="/assets/photos/paris2.jpg">
+            <span>The Eiffel Tower</span>
+        </li>
+        <li>
+            <img src="/assets/photos/paris3.jpg">
+            <span>Notre Dame de Paris</span>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

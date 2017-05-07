@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Samples: On DOM Load</title>
+    <script src="../../scripts/jquery.js"></script>
+
+    <script> //when the document is loaded, watch for a click find the photos and show them (previously hidden).
+    //slideToggle()
+
+    //DEBUG with alert
+
+
+    $(document).ready(function() {
+        alert($('img').length);
+        $('#tour').on('click', 'button', function() {
+            $('.photos').slideToggle(); //it doesn't work!
+        });
+    });
+    </script>
+
+    <style>
+        body {
+            color: black;
+        }
+
+        .photos {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="tour">
+    <h2>Paris, France Tour</h2>
+    <p>$2,499 for 7 Nights</p>
+    <button>See photos from our last tour</button>
+    <ul class="photos">
+        <li>
+            <img src="../../images/hond.gif">
+            <span>Arc de Triomphe</span>
+        </li>
+        <li>
+            <img src="../../images/wesley.jpg">
+            <span>The Eiffel Tower</span>
+        </li>
+        <li>
+            <img src="../../images/hond.jif">
+            <span>Notre Dame de Paris</span>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

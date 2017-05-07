@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Samples: Keyboard Events</title>
+    <script src="../../scripts/jquery.js"></script>
+
+    <script> //when the document is loaded, watch for an event - Update a price based on the amount entered via keyboard
+    //different keyboard events: "keypress", "keydown", "keyup"
+    //different form events: "blur", "select", "change", "focus", "submit"
+    //In the event handler we want to do 3 things:
+    //get the price for the vacation => this returns a string, but we need a number! so: +$(...
+    // to get input value: +$(this).val();  // for data it's just data('dataname');
+    // get the quantity value => to set input value: +$(this).val(<new value>); //
+    //set the total price
+
+    $(document).ready(function() {
+        $('#nights').on('keyup', function() {
+            var nights = +$(this).val();
+            $('#nights-count').text($(this).val()); //change the value of #nights-count to the value from #nights.
+            var price = +$(this).closest('.tour').data('daily-price');
+            $('#total').text(nights * price);
+        });
+    });
+
+    </script>
+</head>
+
+<body>
+<div class="tour" data-daily-price='357'>
+    <h2>Paris, France Tour</h2>
+    <p>$<span id='total'>2,499</span> for <span id='nights-count'>7</span> Nights</p>
+    <p>
+        <label for="nights">Number of Nights</label>
+    </p>
+    <p>
+        <input type="number" id="nights" value="7" />
+    </p>
+</div>
+
+</body>
+</html>

@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Samples ":first"</title>
+    <title>Samples "find(:first)"</title>
     <script src="../../scripts/jquery.js"></script>
 
-    <script> //when the document is loaded, find ony the elements with "promo" class or "france" ID
-            // PSEUDO classes " :first", " :last", " :odd", " :even" NO space after : MATTERS!
-            //INDEX starts at 0 !
+    <script> //when the document is loaded, find only the first tour.
+    //***************It seems only for IDs a space between the ID and the selector needs to exist.***************//
+    //While ":first" matches only a single element, ":first-child" can match more than one: One for each parent.
     
         $(document).ready(function() {
-            $("#tours :first").css({color:"green"});
+            //$("#tours :first").css({color:"green"});
+            $("#tours").find(":first").css({color:"green"});
+            //$("#tours").find(":first-child").css({color:"green"}); //DOES THIS WORK??????????????????
+
         });
     </script>
 </head>

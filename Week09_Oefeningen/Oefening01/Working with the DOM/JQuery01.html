@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Samples</title>
+    <title>Samples: text() method</title>
     <script src="../../scripts/jquery.js"></script>
 
     <script> //when the document is loaded, change the span to $100
+    //When the document is ready, load this function
+    //The ready method takes an event handler function as argument
+    //we create a function with the function() keyword
+    //we pass this function as an argument to the ready method.
+
         $(document).ready(function() {
             $("span").text("$100");
         });

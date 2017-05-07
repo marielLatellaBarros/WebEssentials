@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Samples</title>
+    <title>Samples: Multiple classes</title>
     <script src="../../scripts/jquery.js"></script>
 
-    <script> //when the document is loaded, change the text of multiple headers
+    <script> //when the document is loaded, change the format of ONLY the vacations of america.
+    //Be careful: li class = "vacation america" means a class .vacation and a class .america !
+
         $(document).ready(function() {
-            $("h2").text("Vacaciones!");
+            //$(".america").css({color:"red"});
+            $("#vacations").find(".america").css({color:"red"});
         });
     </script>
 </head>
